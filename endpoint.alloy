@@ -1,0 +1,13 @@
+// Loki endpoint for log ingestion
+loki.write "default" {
+  endpoint {
+    url = "https://loki.lab.svenvg.com/loki/api/v1/push"
+  }
+}
+
+// Prometheus remote write endpoint for metrics
+prometheus.remote_write "default" {
+  endpoint {
+    url = "https://prometheus.lab.svenvg.com/api/v1/write"
+  }
+}
